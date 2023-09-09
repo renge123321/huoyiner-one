@@ -1,47 +1,190 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>火焰鹅</title>
-    <style>  
-      body {
-        margin: 0;
-      }
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #eee;
+
+        }
+
+        .yinying {
+            box-shadow: rgb(0 0 0 /20%) 0px 2px 1px -1px, rgb(0 0 0 /14%) 0px 1px 1px 0px,
+                rgb(0 0 0 /12%) 0px 1px 3px 0px;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .hezi {
+            background: red;
+            height: 50px;
+            width: 100px;
+            margin: 20px;
+        }
+
+        .baise {
+            background-color: white;
+        }
+
+        .flex1 {
+            flex: 1;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .mg8 {
+            margin: 8px;
+        }
+
+        .mgr8 {
+            margin-right: 8px;
+        }
+
+        .mgt8 {
+            margin-top: 8px;
+        }
+
+        .mgt20 {
+            margin-top: 20px;
+        }
+
+        .daohan {
+            padding: 10px 20px;
+            border-bottom: 1px solid rgb(190, 190, 190);
+            font-size: 14px;
+        }
+
+        @media (max-width:600px) {
+            .cenbian {
+                display: none;
+            }
+
+            .neirong {
+                flex-direction: column;
+            }
+
+            .shujuqu {
+                flex-direction: column;
+            }
+
+            .youqu {
+                margin-left: 8px;
+            }
+
+            .shuju {
+                margin: 0 0 8px;
+                flex: auto;
+            }
+        }
     </style>
-  </head>
-  <body>
-    <div style="
-    background-color: #f1f1f1;
-    text-align:center;
-    padding:40px;
+</head>
+
+<body style="display: flex;">
+    <!--侧栏-->
+    <div style="width: 200px;z-index: 2;" class="baise yinying">
+        <!--头像栏-->
+        <div style="padding: 10px;align-items: center;justify-content: center;
+        border-bottom: 1px solid #999;" class="flex column">
+            <img src="https://i01piccdn.sogoucdn.com/18f0181b92c04f4f" width="100px" height="80px" alt="">
+            <div style="margin-left: 5px;font-size: 18px;">火焰鹅</div>
+            <!--头像栏-->
+        </div>
+        <div class="flex1 ">
+
+            <div class="daohan">介绍</div>
+            <div style="height: 60px;" class="daohan"></div>
+            <div class="daohan">招牌菜</div>
+            <div style="height: 70px;" class="daohan"></div>
+            <div class="daohan">地址和联系方式</div>
+
+        </div>
+    </div>
+    <!--主区域-->
+    <div class="flex1 flex column">
+        <!--头部-->
+        <div style="height: 110px;z-index: 1;margin:3px;align-items: center;justify-content: center;"
+            class="flex baise yinying">
+            <p style="align-items: center;justify-content: center;font-size: 20px;"> 欢迎 欢迎 </p>
+        </div>
+        <!--内容区-->
+        <div style="overflow: auto;" class="neirong flex1 flex">
+            <!--左区-->
+            <div style="flex: 3;" class="flex column mg8 shujuqu">
+                <!--数据区-->
+
+
+                <!--列表区-->
+                <div class="flex column">
+                    <!--列表项-->
+                    <div style="height: 100px;" class=" baise mgt8 yinying">
+                        <p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;火焰鹅，是一家融合了创新火锅与美味鹅肉的独特餐厅。我们的餐厅致力于为顾客带来一场火爆的美食体验，将传统的火锅与特色的鹅肉料理完美融合，为您呈现出一道独一无二的美味盛宴。
+                        </p>
+                    </div>
+                    <div class="flex shujuqu yinying mgt20">
+                        <div style="height: 100px;" class="shuju flex1 baise mgr8 yinying">
+                            <img src="https://i01piccdn.sogoucdn.com/f24b6cd7e8227af3" width="90px" height="80px"
+                                alt="">
+                            <div style="margin-left: 5px;font-size: 7px;"></div>
+                        </div>
+                        <div style="height: 100px;" class="shuju flex1 baise mgr8 yinying">
+                            <img src="https://i03piccdn.sogoucdn.com/3d825c1de9a44bca" width="90px" height="80px"
+                                alt="">
+                            <div style="margin-left: 5px;font-size: 7px;"></div>
+                        </div>
+                        <div style="height: 100px;" class="shuju flex1 baise mgr8 yinying">
+                            <img src="https://i04piccdn.sogoucdn.com/ee9915b777430331" width="90px" height="80px"
+                                alt="">
+                            <div style="margin-left: 5px;font-size: 7px;"></div>
+                        </div>
+                        <div style="height: 100px;" class="shuju flex1 baise mgr8 yinying">
+                            <img src="https://i02piccdn.sogoucdn.com/5e490bff00a131aa" width="90px" height="80px"
+                                alt="">
+                            <div style="margin-left: 5px;font-size: 7px;"></div>
+                        </div>
+
+                    </div>
+                    <div style="height: 100px;" class=" baise mgt8 yinying">
+                    </div>
+
+                </div>
+
+            </div>
+            <!--右区-->
+            <div style="flex: 1;" class="flex column mgr8 youqu">
+                <!--提示区-->
+                <div style="height: 110px;" class="baise">
+                    <img src="https://i03piccdn.sogoucdn.com/1169a23970a012bc" width="90px" height="110px" alt="">
+                    <div style="margin-left: 5px;font-size: 7px;"></div>
+                </div>
+                <!--消息区-->
+                <div style="height: 200px;" class="baise mgt8">
+                    <img src="https://i02piccdn.sogoucdn.com/6f583cd63d40c96b" width="90px" height="110px" alt="">
+                    <div style="margin-left: 5px;font-size: 7px;"></div>
+                    <img src="https://i01piccdn.sogoucdn.com/c30ba3dd9cdb834f" width="90px" height="110px" alt="">
+                    <div style="margin-left: 5px;font-size: 7px;"></div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div>
+
+
+    </div>
+    <divstyle=" background-color: #f1f1f1; text-align:center; padding:40px; font-size:12px; ">
+ 
     
-    ">
-      <img src='https://kangwenchang.com/logo.png'alt="火焰鹅"width="80px"> 
-    </div>
-    <div style="
-    max_width = 700px;
-    margin: 30px auto;
-    padding:15px;
-    line-height:2;
-    color:red;
+</body>
 
-    ">
-      <p>火焰鹅</p>
-      <p>火焰鹅</p>
-      <p>火焰鹅</p>
-      <p>火焰鹅</p>
-      <p>火焰鹅</p>
-
-    </div>
-    <divstyle="
-    background-color: #f1f1f1;
-    text-align:center;
-    padding:40px;
-    font-size:12px;
-    ">
-    <p>火焰鹅</p>
-    <a href="https://kangwenchang.com/">友情链接</a>
-    </div>
-  </body>
 </html>
